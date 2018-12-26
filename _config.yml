@@ -10,8 +10,8 @@ keyword: "java"
 
 
 
-# SNS settings
-# RSS: false
+SNS settings
+RSS: false
 # weibo_username:     huxpro
 # zhihu_username:     huxpro
 # github_username:    969100115
@@ -48,11 +48,11 @@ kramdown:
 
 
 # Disqus settings
-# disqus_username: 969100115
+ disqus_username: 969100115
 
 # commentit
-commentitUsername = 969100115
-commentitRepo = 969100115 / 969100115.github.io
+# commentitUsername = 969100115
+# commentitRepo = 969100115 / 969100115.github.io
 
 # Netease setttings
 # netease_comment: false
@@ -84,7 +84,7 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
-# service-worker: true
+service-worker: true
 
 
 
