@@ -51,8 +51,8 @@ kramdown:
 # disqus_username: 969100115
 
 # commentit
-var commentitUsername ='969100115';
-var commentitRepo ='969100115 / 969100115.github.io';
+commentitUsername = 969100115
+commentitRepo = 969100115 / 969100115.github.io
 
 # Netease setttings
 # netease_comment: false
