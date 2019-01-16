@@ -164,7 +164,7 @@ Markdown的格式对于缩进是很严格的，比如：
 
 ---
     
-图片
+### 图片
 `![Alt text](http://www.izhangbo.cn/wp-content/themes/minty/img/logo.png "Optional title")`
 
 ![Alt text](http://www.izhangbo.cn/wp-content/themes/minty/img/logo.png "Optional title")
