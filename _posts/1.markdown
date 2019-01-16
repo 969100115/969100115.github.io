@@ -1,0 +1,230 @@
+---
+layout:     post
+title:      "Hello 2019"
+subtitle:   " \"Hello Work, Hello Life\""
+date:       2019-01-16 14:00:00
+author:     "Wenbo"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - 生活
+    - Work
+---
+
+> “Yeah It's on. ”
+
+
+## 前言
+
+这里才是我职业生涯的真正开始
+
+[跳过废话，直接看技术实现 ](#build) 
+
+巴啦巴啦巴啦啦
+
+
+
+<p id = "build"></p>
+---
+
+## 正文
+
+学习一下Markdown的使用
+
+
+先从标题开始吧：
+
+# h1级标题
+## h2级标题
+### h3级标题
+#### h4级标题
+##### h5级标题
+
+###### h6接下来是一道优美的分割线
+
+---
+### 分割线
+（三个以上的短线“-”即可作出分割线）
+ 记得短线的上要各空出一行
+
+---
+### 超链接
+
+[连接名称](网址 , 标题)，如：
+
+[我是链接名](https://969100115.github.io/2015/01/29/hello-2015/#build, "我的博客")
+
+另一种写法：
+[链接名][链接代号]
+然后在别的地方定义 3 这个详细链接信息，如：
+
+[here][3]
+
+[3]: https://969100115.github.io/2015/01/29/hello-2015/#build, "我的博客"
+
+---
+### 键盘键
+` <kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd> `
+<kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd>
+
+---
+### code格式：
+反引号 ``
+`
+``
+
+  ```
+    @RequestMapping("/return")
+    @ResponseBody
+    
+  public Set<LendOrderBo> returnBook(@RequestParam String bookList, HttpServletResponse res, HttpServletRequest req) {
+        String userId = SecurityFactory.getInstance().getCurrentUserId(req, res);
+        User user = userService.returnUser(userId);
+        if (!ValidateUtil.isValid(user)) {
+            return null;
+        }
+
+        JSONObject jsonObject = JSON.parseObject(bookList);
+
+        JSONArray jsonArray = jsonObject.getJSONArray("book");
+        Iterator<Object> it = jsonArray.iterator();
+
+        Set<Book> bookSet = new HashSet<Book>();
+
+        while (it.hasNext()) {
+            jsonObject = JSON.parseObject(it.next().toString());
+            String number = jsonObject.get("number").toString();
+            Book book = bookService.findBook(number);
+            book = bookService.setStateReturn(book);
+            bookSet.add(book);
+
+        }
+        Set<LendOrder> lendOrderSet = lendOrderService.returnBookSet(user, bookSet);
+        Set<LendOrderBo> lendOrderBos = new HashSet<LendOrderBo>();
+
+        for (LendOrder l : lendOrderSet) {
+            LendOrderBo lendOrderBo = new LendOrderBo(l);
+            lendOrderBos.add(lendOrderBo);
+        }
+
+        return lendOrderBos;
+
+    }   
+    
+ ```  
+ 
+其中值得注意的是``
+    `
+    ``的数量依据所引用代码中连续``
+    `
+    ``的数量+1决定；
+Markdown的格式对于缩进是很严格的，比如：
+    在你引用一段代码后，文字内容缩进量与代码缩进量一样，则其默认这行文字属于引用部分
+    需要引用代码时，如果引用的语句只有一段，不分行，可以用``
+    `
+    ``将语句包起来。
+
+    
+  ---
+### 文字引用
+  
+  你只需要在你希望引用的文字前面加上 `>` 就好了，例如：
+  
+  > 一盏灯， 一片昏黄； 一简书， 一杯淡茶。 
+  > 守着那一份淡定， 品读属于自己的寂寞。 保持淡定，
+  
+  ---
+
+### 段落：
+   以一个空行开始，以一个空行结束，中间的就是一个段落。
+   
+---
+
+### 表格：
+```
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+```
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+ ---
+### 强调：
+
+`*斜体强调*`
+*斜体强调*
+`**粗体强调**`
+**粗体强调**
+
+---
+    
+图片
+`![Alt text](http://www.izhangbo.cn/wp-content/themes/minty/img/logo.png "Optional title")`
+
+![Alt text](http://www.izhangbo.cn/wp-content/themes/minty/img/logo.png "Optional title")
+    
+---
+
+### 列表
+
+在 Markdown 中，你只需要在文字前面加上 - 就可以了，如:
+
+```
+- 文本1
+- 文本2
+- 文本3
+```
+- 文本1
+- 文本2
+- 文本3
+ 
+```  
+1. 文本1
+2. 文本2
+3. 文本3
+ ```
+ 1. 文本1
+2. 文本2
+3. 文本3
+
+`-`、`1`.和文本之间要保留一个字符的空格。
+    
+----
+                                                        
+######                                         又是一道华丽的分隔符
+
+## Summary
+  如此Markdown的基本语法就全部掌握了，这也是我真正的第一篇技术贴。
+  
+  
+  在此立下誓言，每天一篇，长短不限，技术不限。
+  ### 每天一篇！！！！！
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
